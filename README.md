@@ -11,6 +11,145 @@ This project demonstrates the implementation of **Multiple Linear Regression fro
 - Validate our implementation against established libraries
 - Interpret model coefficients and assess model performance
 
+## How to Run This Project
+
+### Prerequisites
+
+- **Python 3.13 or higher** (required by the project configuration)
+- **Package Manager**: This project uses `uv` for dependency management (recommended) or `pip`
+
+### Installation Options
+
+#### Option 1: Using uv (Recommended)
+
+1. **Install uv** (if not already installed):
+   ```bash
+   pip install uv
+   ```
+
+2. **Clone or download the project**:
+   ```bash
+   git clone <repository-url>
+   cd CustomLinReg
+   ```
+
+3. **Create and activate virtual environment**:
+   ```bash
+   uv venv
+   uv sync
+   ```
+
+4. **Run the project**:
+   ```bash
+   uv run python src/main.py
+   ```
+
+#### Option 2: Using pip
+
+1. **Clone or download the project**:
+   ```bash
+   git clone <repository-url>
+   cd CustomLinReg
+   ```
+
+2. **Create and activate virtual environment**:
+   ```bash
+   python -m venv .venv
+   
+   # On Windows:
+   .venv\Scripts\activate
+   
+   # On macOS/Linux:
+   source .venv/bin/activate
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   
+   *Note: If `requirements.txt` doesn't exist, install the dependencies manually:*
+   ```bash
+   pip install matplotlib>=3.10.3 numpy>=2.3.1 pandas>=2.3.0 scikit-learn>=1.7.0
+   ```
+
+4. **Run the project**:
+   ```bash
+   python src/main.py
+   ```
+
+### What the Code Does
+
+When you run `main.py`, the program will:
+
+1. **Load the dataset** (`WHO_LE_Data.csv`) containing life expectancy data from the World Health Organization
+2. **Preprocess the data**:
+   - Scale GDP values from dollars to thousands of dollars
+   - Remove redundant features to prevent multicollinearity
+   - Handle missing values
+   - Convert categorical variables to numerical format
+3. **Train two models**:
+   - Your custom implementation of multiple linear regression
+   - Scikit-learn's LinearRegression for comparison
+4. **Compare results**:
+   - Display RMSE (Root Mean Squared Error) for both models
+   - Show coefficient comparisons
+   - Generate a scatter plot of actual vs. predicted values
+5. **Output**:
+   - Console output showing model performance metrics
+   - A matplotlib plot window showing the prediction accuracy
+
+### Expected Output
+
+You should see output similar to:
+```
+--- Comparison ---
+My Model's Intercept:       321.54392286233633
+Scikit-learn's Intercept:   321.54392285192375
+
+My Model's RMSE:            3.66
+Scikit-learn's RMSE:        3.66
+
+--- Coefficient Comparison ---
+        Adult Mortality: My Model = -0.0171, Scikit-learn = -0.0171
+                Alcohol: My Model = -0.2086, Scikit-learn = -0.2086
+                   GDP: My Model = 0.0632, Scikit-learn = 0.0632
+...
+```
+
+Plus a matplotlib plot window showing the actual vs. predicted life expectancy scatter plot.
+
+### Troubleshooting
+
+**Common Issues:**
+
+1. **Python Version Error**: Ensure you're using Python 3.13 or higher
+   ```bash
+   python --version
+   ```
+
+2. **Missing Dependencies**: If you get import errors, ensure all packages are installed:
+   ```bash
+   pip install matplotlib numpy pandas scikit-learn
+   ```
+
+3. **Data File Not Found**: Ensure `WHO_LE_Data.csv` is in the `src/` directory
+
+4. **Plot Window Not Showing**: If using a headless environment, the plot may not display. The code will still run and show the console output.
+
+### Project Structure
+
+```
+CustomLinReg/
+├── README.md                 # This file
+├── pyproject.toml           # Project configuration and dependencies
+├── src/
+│   ├── main.py              # Main implementation and execution script
+│   ├── WHO_LE_Data.csv      # World Health Organization life expectancy dataset
+│   └── Actual_vs_predicted_life_expectancy_plot.png  # Generated plot
+└── .venv/                   # Virtual environment (created during setup)
+```
+
 ## Mathematical Foundation
 
 ### Ordinary Least Squares (OLS) Method
