@@ -269,6 +269,8 @@ The scatter plot below shows the relationship between actual and predicted life 
 - Points closer to the line indicate better predictions
 ```
 
+![Actual vs. Predicted Plot](src/Actual_vs_predicted_life_expectancy_plot.png)
+
 **Interpretation:**
 - Points clustering around the diagonal line indicate good model performance
 - Scatter pattern shows prediction accuracy across different life expectancy ranges
@@ -283,7 +285,7 @@ The scatter plot below shows the relationship between actual and predicted life 
 **Root Cause:** Multicollinearity between highly correlated features made the $(X^T X)$ matrix nearly singular, leading to unstable coefficient estimates.
 
 **Solution:** 
-- Identified and removed redundant features
+- Identified and removed redundant features (listed in the 'features_to_remove' list in the main() method)
 - Used correlation analysis to detect highly correlated variables
 - Implemented proper error handling for singular matrices
 
@@ -321,7 +323,7 @@ The scatter plot below shows the relationship between actual and predicted life 
 **Validation Strategy:**
 - Split data into training/testing sets (80/20)
 - Compare against Scikit-learn's implementation
-- Use RMSE as performance metric
+- Use RMSE as a performance metric
 - Examine coefficient similarity
 
 **Why This Matters:**
