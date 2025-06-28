@@ -91,31 +91,30 @@ class MultipleLinearRegression:
 | Metric | Custom Model | Scikit-learn |
 |--------|-------------|--------------|
 | **RMSE** | ~3.66 years | ~3.66 years |
-| **Intercept** | [Model intercept] | [Scikit intercept] |
+| **Intercept** | [My Model's Intercept: 321.54392286233633] | [Scikit-learn's Intercept: 321.54392285192375] |
 
 ### Coefficient Comparison
 
 | Feature | Custom Model | Scikit-learn |
 |---------|-------------|--------------|
-| **Intercept** | [Value] | [Value] |
-| **Adult Mortality** | [Value] | [Value] |
-| **Alcohol** | [Value] | [Value] |
-| **GDP** | [Value] | [Value] |
-| **Hepatitis B** | [Value] | [Value] |
-| **Measles** | [Value] | [Value] |
-| **Polio** | [Value] | [Value] |
-| **Total Expenditure** | [Value] | [Value] |
-| **Diphtheria** | [Value] | [Value] |
-| **HIV/AIDS** | [Value] | [Value] |
-| **BMI** | [Value] | [Value] |
-| **Under-five Deaths** | [Value] | [Value] |
-| **Thinness 1-19 Years** | [Value] | [Value] |
-| **Thinness 5-9 Years** | [Value] | [Value] |
-| **Income Composition** | [Value] | [Value] |
-| **Schooling** | [Value] | [Value] |
-| **Status_Developing** | [Value] | [Value] |
+| **Intercept** | [-0.1338] | [-0.1338] |
+| **Adult Mortality** | [-0.0171] | [-0.0171] |
+| **Alcohol** | [-0.2086] | [-0.2086] |
+| **GDP** | [0.0632] | [0.0632] |
+| **Hepatitis B** | [-0.0071] | [-0.0071] |
+| **Measles** | [0.0000] | [0.0000] |
+| **Polio** | [0.0090] | [0.0090] |
+| **Total Expenditure** | [0.1056] | [0.1056] |
+| **Diphtheria** | [0.0204] | [0.0204] |
+| **HIV/AIDS** | [-0.4437] | [-0.4437] |
+| **BMI** | [0.0285] | [0.0285] |
+| **Under-five Deaths** | [-0.0022] | [-0.0022] |
+| **Thinness 1-19 Years** | [-0.0656] | [-0.0656] |
+| **Income Composition** | [10.0681] | [10.0681] |
+| **Schooling** | [0.9878] | [0.9878] |
+| **Status_Developing** | [-0.9941] | [-0.9941] |
 
-*Note: The coefficients should be nearly identical between implementations, validating our custom model's correctness.*
+*Note: The coefficients are nearly identical between implementations, validating our custom model's correctness.*
 
 ## Visualization
 
