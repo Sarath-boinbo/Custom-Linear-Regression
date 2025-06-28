@@ -8,7 +8,7 @@ This project demonstrates the implementation of **Multiple Linear Regression fro
 - Implement the Normal Equation for multiple linear regression
 - Understand matrix algebra in machine learning
 - Handle data preprocessing challenges (missing values, categorical variables)
-- Validate our implementation against established libraries
+- Validate my implementation against established libraries
 - Interpret model coefficients and assess model performance
 
 ## How to Run This Project
@@ -89,7 +89,7 @@ When you run `main.py`, the program will:
    - Handle missing values
    - Convert categorical variables to numerical format
 3. **Train two models**:
-   - Your custom implementation of multiple linear regression
+   - My custom implementation of multiple linear regression
    - Scikit-learn's LinearRegression for comparison
 4. **Compare results**:
    - Display RMSE (Root Mean Squared Error) for both models
@@ -253,7 +253,7 @@ class MultipleLinearRegression:
 | **Schooling** | [0.9878] | [0.9878] |
 | **Status_Developing** | [-0.9941] | [-0.9941] |
 
-*Note: The coefficients are nearly identical between implementations, validating our custom model's correctness.*
+*Note: The coefficients are nearly identical between implementations, validating my custom model's correctness.*
 
 ## Visualization
 
@@ -350,7 +350,7 @@ This project successfully demonstrates the implementation of multiple linear reg
 3. **Model Validation:** Verified implementation against established libraries
 4. **Practical Insights:** Learned about multicollinearity, feature selection, and model interpretability
 
-The custom implementation achieves the same performance as Scikit-learn, confirming the mathematical correctness of our approach while providing deep insights into the underlying algorithms that power modern machine learning libraries.
+The custom implementation achieves the same performance as Scikit-learn, confirming the mathematical correctness of my approach while providing deep insights into the underlying algorithms that power modern machine learning libraries.
 
 ---
 
