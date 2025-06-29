@@ -197,7 +197,7 @@ if __name__ == "__main__":
 # 2.  **Reliability:** The model is more robust. Its coefficients are less likely to swing wildly
 #     if the training data changes slightly.
 #
-# **Conclusion:** We made a deliberate and correct trade-off. We sacrificed a negligible amount
+# **Conclusion:** I made a deliberate and correct trade-off. I sacrificed a negligible amount
 # of raw predictive accuracy for a massive gain in model interpretability and reliability.
 # For the goal of understanding *how* a model works, the new version is far superior.
 #
